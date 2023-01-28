@@ -24,4 +24,4 @@ jobs:
           username: heamantkr
           key: ${{ secrets.SSHKEY }}
           passphrase: ${{ secrets.PASS_PHRASE }}
-          script: "cd /home/hemantkr/web/testing.rajasthanisong.in/public_html && ./.scripts/deploy.sh"
+          script: "cd /home/hemantkr/web/test.rajasthanisong.in/public_html && ./.scripts/deploy.sh"
