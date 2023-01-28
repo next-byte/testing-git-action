@@ -21,7 +21,7 @@ jobs:
         with:
           host: 161.97.127.165
           port: 22
-          username: heamantkr
+          username: mhrgroup98
           key: ${{ secrets.SSHKEY }}
           passphrase: ${{ secrets.PASS_PHRASE }}
           script: "cd /home/hemantkr/web/test.rajasthanisong.in/public_html && ./.scripts/deploy.sh"
