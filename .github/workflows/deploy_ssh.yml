@@ -19,9 +19,9 @@ jobs:
       - name: 📂 Deploy to Server
         uses: appleboy/ssh-action@v0.1.7
         with:
-          host: 161.97.127.165
-          port: 22
-          username: mhrgroup98
+          host: ${{ secrets.HOST }}
+          port: ${{ secrets.PORT }}
+          username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHKEY }}
           passphrase: ${{ secrets.PASS_PHRASE }}
-          script: "cd /home/hemantkr/web/test.rajasthanisong.in/public_html && ./.scripts/deploy.sh"
+          script: "cd /home/mhrgroup98/web/test.rajasthanisong.in/public_html && ./.scripts/deploy.sh"
