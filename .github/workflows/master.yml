@@ -1,7 +1,7 @@
 name: Deploy Application
 on:
   push:
-    branches: [master,production]
+    branches: [production]
 
 
 name: 🚀 Deploy website on push (Master)
@@ -10,10 +10,10 @@ jobs:
     name: Create deployment artifacts
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    uses: actions/checkout@v3
 
     - name: Compile CSS and Javascript
-    run: |
+      run: |
       npm install
       npm run prod
 
