@@ -75,8 +75,8 @@ jobs:
           username: ${{ matrix.server.username }}
           key: ${{ secrets.SSHKEY }}
           port: ${{ matrix.server.port }}
-          source: ${{ github.sha }}.tar.gz
           target: "${{ matrix.server.path }}/artifacts"
+          source: ${{ github.sha }}.tar.gz
           script: |
             mkdir -p "${{ matrix.server.path }}/releases/${GITHUB_SHA}"
             tar xzf ${{ matrix.server.path }}/artifacts/${GITHUB_SHA}.tar.gz -C "${{ matrix.server.path }}/releases/${GITHUB_SHA}"
