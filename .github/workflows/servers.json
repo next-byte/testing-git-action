@@ -5,7 +5,7 @@
         "username": "mhrgroup98",
         "port": "22",
         "beforeHooks": "echo ${GITHUB_SHA}",
-        "afterHooks": "",
+        "afterHooks": "php artisan cache:clear && php artisan config:clear && php artisan view:clear && php artisan optimize",
         "path": "/home/mhrgroup98/web/test.rajasthanisong.in/public_html"
     }
 ]
