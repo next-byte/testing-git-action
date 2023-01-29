@@ -1,13 +1,10 @@
-name: Deploy Application
 on:
   push:
     branches:
-      - production
-
-
+      - master
 name: 🚀 Deploy website on push (Master)
 jobs:
-  create-deployment-artifacts:
+  web-deploy:
     name: Create deployment artifacts
     runs-on: ubuntu-latest
     steps:
