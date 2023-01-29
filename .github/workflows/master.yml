@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - production
-
+name: 🚀 Deploy website on push (Master)
 jobs:
   create-deployment-artifacts:
     name: Create deployment artifacts
@@ -11,10 +11,10 @@ jobs:
     steps:
       - name: checout git codes
         uses: actions/checkout@v3
-      - name: Compile CSS and Javascript
-        run: |
-          npm install
-          npm run prod
+#      - name: Compile CSS and Javascript
+#        run: |
+#          npm install
+#          npm run prod
 
       - name: Configure PHP 8.0
         uses: shivammathur/setup-php@master
