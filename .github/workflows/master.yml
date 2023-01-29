@@ -1,36 +1,36 @@
+name: Deploy Application
 on:
   push:
-    branches:
-      - master
+    branches: [master,production]
+
+
 name: 🚀 Deploy website on push (Master)
 jobs:
-  web-deploy:
-    name: 🎉 Deploy
+  create-deployment-artifacts:
+    name: Create deployment artifacts
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v3
+    - uses: actions/checkout@v3
 
-    - name: Setup PHP
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: 8.1
-    - name: Cache Composer packages
-      id: composer-cache
-      uses: actions/cache@v2
-      with:
-        path: vendor
-        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-php-
-    
-    - name: Install dependencies
-      run: composer install --prefer-dist --no-progress
+    - name: Compile CSS and Javascript
+    run: |
+      npm install
+      npm run prod
 
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+    - name: Configure PHP 8.0
+      uses: shivammathur/setup-php@master
       with:
-        server: 161.97.127.165
-        username: ${{ secrets.ftp_username }}
-        password: ${{ secrets.ftp_password }}
-        server-dir: public_html/
+      php-version: 8.0
+      extensions: mbstring, ctype, fileinfo, openssl, PDO, bcmath, json, tokenizer, xml
+
+    - name: Composer install
+      run: |
+      composer install --no-dev --no-interaction --prefer-dist
+
+
+
+
+
+
+
+
