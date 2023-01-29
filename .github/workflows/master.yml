@@ -6,7 +6,7 @@ on:
 
 name: 🚀 Deploy website on push (Master)
 jobs:
-  create-deployment-artifacts:
+create-deployment-artifacts:
     name: Create deployment artifacts
     runs-on: ubuntu-latest
     steps:
