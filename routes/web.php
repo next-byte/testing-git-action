@@ -14,6 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return "Deployed via ssh & artifacts.\n Multi-server deployment testing.";
-//    return view('welcome');
+   return view('welcome');
 });

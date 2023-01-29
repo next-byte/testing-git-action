@@ -45,7 +45,7 @@
                     </svg>
                 </div>
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <h5>Delpoyed via SSH</h5>
+                    <h5>Delpoyed via SSH & Artificats</h5>
                 </div>
 
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
