@@ -56,7 +56,6 @@ jobs:
           echo "${delimiter}" >> "${GITHUB_OUTPUT}"
 
 
-
   prepare-release-on-servers:
     name: "${{ matrix.server.name }}: Prepare release"
     runs-on: ubuntu-latest
