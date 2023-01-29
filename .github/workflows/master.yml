@@ -3,7 +3,10 @@ on:
   push:
     branches:
       - production
-name: Deploy website on push (Master)
+
+
+  # Authenticate to the the server via ssh
+  # and run our deployment script
 jobs:
   create-deployment-artifacts:
     name: Create deployment artifacts
