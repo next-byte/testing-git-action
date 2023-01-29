@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - production
-name: 🚀 Deploy website on push (Master)
+name: Deploy website on push (Master)
 jobs:
   create-deployment-artifacts:
     name: Create deployment artifacts
