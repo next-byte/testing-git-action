@@ -4,9 +4,9 @@ name: 🚀 Deploy website on push (via SSH)
 # pull request events on the production branch
 on:
   push:
-    branches: ["production"]
+    branches: ["ssh-deploy"]
   pull_request:
-    branches: ["production"]
+    branches: ["ssh-deploy"]
 
 # Authenticate to the the server via ssh
 # and run our deployment script
